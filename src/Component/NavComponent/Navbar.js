@@ -1,8 +1,8 @@
 import React from 'react'
 import Logo from './Logo'
 import './nav.css'
+
 import Profilepic from '../../Static/avatar.png'
-import { Link } from "react-router-dom";
 const Navbar=()=>{
 return(
     <>
@@ -13,10 +13,9 @@ return(
   </div>
   <div>
   <a href="#news">Home</a>
-  <Link to="/Register">Register</Link>
+  <a href="#news">Register</a>
   <a href="#news">Booking</a>
-  <Link to="/">Log In</Link>
-
+  <a href="#news">Login</a>
   <div class="dropdown">
     
         <img src={Profilepic} alt="" class="dropbtn"/>
