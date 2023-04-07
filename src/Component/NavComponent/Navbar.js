@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import './nav.css'
 import Profilepic from '../../Static/avatar.png'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar=()=>{
 return(
     <>
@@ -13,10 +13,10 @@ return(
   </div>
   <div>
   <a href="#news">Home</a>
-  <a href="#news">Register</a>
+  <Link to="/Register">Register</Link>
   <a href="#news">Booking</a>
-  <a href="#news">Login</a>
-  {/* <Link to="/Register">Register</Link> */}
+  <Link to="/">Log In</Link>
+
   <div class="dropdown">
     
         <img src={Profilepic} alt="" class="dropbtn"/>

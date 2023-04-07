@@ -9,10 +9,9 @@ import Register from './Component/AuthComponent/Register';
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar/>
       <br></br>
-
-      <BrowserRouter>
       <Routes>
           <Route exact path="/" element= {<Login/>}/>
           <Route path="/Register" element= {<Register/>}/>
