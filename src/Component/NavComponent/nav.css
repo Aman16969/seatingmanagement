@@ -1,0 +1,74 @@
+.navbar {
+    overflow: hidden;
+    background-color: #24324a;
+    display: flex;
+    justify-content: space-between;
+    /* max-height: 50px; */
+    position:fixed;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 20spx;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .aims-logo{
+    padding: 1px;
+    margin-left:-50px;
+  }
+  .profile-image{
+    height: 20px;
+    width: 20px;
+  }
+  
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  .dropdown  {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: rgb(251, 203, 203);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropbtn{
+    height: 30px;
+  }
+
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #386dd1;
+    opacity: 90%;
+    min-width: 160px;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(117, 113, 113, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(253, 251, 251);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #04040e;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
