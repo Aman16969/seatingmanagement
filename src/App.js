@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <br></br>
-      <Login/>
-{/* <Register/> */}
+      {/* <Login/> */}
+<Register/>
 
 
     </div>
