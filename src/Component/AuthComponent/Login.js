@@ -1,11 +1,13 @@
 import React from 'react'
 import './Auth.css'
 import Avatar from '../../Static/avatar.png';
+import { Link } from "react-router-dom";
+//import Register from './Register';
 const Login=(props)=>{
 return(
     <>
   
-  <form className="modal-content animate" >
+  <form className="modal-content animate "  >
     
   <div class="imgcontainer">
      
@@ -20,8 +22,12 @@ return(
         
       <button type="submit">Login</button>
       <label>
-      <span className="register-link">Don't have an account? <a href="index.html" onClick={() => props.onFormSwitch('register')} 
-      style={{color:'red'}}>Register here!</a></span>
+      <span className="register-link">Don't have an account?
+        {/* <a href="/Register" onClick={() => props.onFormSwitch('register')} 
+        style={{color:'red'}}>Register here!</a> */}
+        <Link to="/Register">Register</Link>
+
+      </span>
       </label>
     </div>
 

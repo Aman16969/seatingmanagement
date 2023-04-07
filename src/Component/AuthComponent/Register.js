@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const Register=()=>{
     
@@ -64,7 +65,8 @@ const Register=()=>{
  
   
   <div className="container signin">
-    <p>Already have an account? <a href="login.js" style={{color:'#ed7e1b'}}>Sign in</a>.</p>
+    <p>Already have an account?<Link to="/Login">Sign In</Link></p>
+    
   </div>
 </form>
 </div>
