@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Login=(props)=>{
 return(
     <>
-  
   <form className="modal-content animate "  >
     
   <div class="imgcontainer">
@@ -30,7 +29,6 @@ return(
       </span>
       </label>
     </div>
-
     <div className="container" >
     <button type="button" className="cancelbtn">Forgot Password</button>
    

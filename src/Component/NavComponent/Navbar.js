@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import './nav.css'
 import Profilepic from '../../Static/avatar.png'
+import { Link } from "react-router-dom";
 const Navbar=()=>{
 return(
     <>
@@ -15,6 +16,7 @@ return(
   <a href="#news">Register</a>
   <a href="#news">Booking</a>
   <a href="#news">Login</a>
+  {/* <Link to="/Register">Register</Link> */}
   <div class="dropdown">
     
         <img src={Profilepic} alt="" class="dropbtn"/>

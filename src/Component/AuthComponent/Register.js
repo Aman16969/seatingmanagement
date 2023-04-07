@@ -65,7 +65,7 @@ const Register=()=>{
  
   
   <div className="container signin">
-    <p>Already have an account?<Link to="/Login">Sign In</Link></p>
+    <p>Already have an account?<Link to="/">Sign In</Link></p>
     
   </div>
 </form>
