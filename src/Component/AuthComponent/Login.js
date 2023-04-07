@@ -22,10 +22,7 @@ return(
       <button type="submit">Login</button>
       <label>
       <span className="register-link">Don't have an account?
-        {/* <a href="/Register" onClick={() => props.onFormSwitch('register')} 
-        style={{color:'red'}}>Register here!</a> */}
         <Link to="/Register">Register</Link>
-
       </span>
       </label>
     </div>

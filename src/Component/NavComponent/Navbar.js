@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import './nav.css'
 import Profilepic from '../../Static/avatar.png'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 const Navbar=()=>{
 return(
     <>
