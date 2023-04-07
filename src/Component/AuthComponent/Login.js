@@ -5,7 +5,7 @@ const Login=(props)=>{
 return(
     <>
   
-  <form className="modal-content animate" >
+  <form className="modal-content animate "  >
     
   <div class="imgcontainer">
      
