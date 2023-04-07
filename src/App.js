@@ -1,6 +1,5 @@
 
 import './App.css';
-// import ReactDOM from "react-dom/client";
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 
 import Navbar from './Component/NavComponent/Navbar';
@@ -12,13 +11,15 @@ function App() {
     <>
     <Navbar/>
     <div className="App">
-     
-      {/* <Login/> */}
+      <Navbar/>
+      <Login/>
 {/* <Register/> */}
 
       <BrowserRouter>
+      <Navbar/>
+      <br></br>
       <Routes>
-          <Route exact path="/Login" element= {<Login/>}/>
+          <Route exact path="/" element= {<Login/>}/>
           <Route path="/Register" element= {<Register/>}/>
       </Routes>
       </BrowserRouter>

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Login=(props)=>{
 return(
     <>
-  
   <form className="modal-content animate "  >
     
   <div class="imgcontainer">
@@ -23,21 +22,15 @@ return(
       <button type="submit">Login</button>
       <label>
       <span className="register-link">Don't have an account?
-        {/* <a href="/Register" onClick={() => props.onFormSwitch('register')} 
-        style={{color:'red'}}>Register here!</a> */}
         <Link to="/Register">Register</Link>
-
       </span>
       </label>
     </div>
-
     <div className="container" >
     <button type="button" className="cancelbtn">Forgot Password</button>
    
   </div>
   </form>
-
-
     </>
 )
 }
