@@ -12,10 +12,12 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <br></br>
+      <div className='bg'>
       <Routes>
           <Route exact path="/" element= {<Login/>}/>
           <Route path="/Register" element= {<Register/>}/>
       </Routes>
+      </div>
       </BrowserRouter>
     </div>
 

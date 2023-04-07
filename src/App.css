@@ -12,3 +12,11 @@
   background-size: cover;
   
 }
+
+
+.bg {
+  height: 100%;
+  margin-top : -70px;
+  background-repeat:no-repeat; 
+  padding-top: 50px;
+}
