@@ -11,7 +11,8 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <br></br>
+      <Login/>
+{/* <Register/> */}
 
       <BrowserRouter>
       <Routes>
