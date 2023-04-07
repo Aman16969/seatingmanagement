@@ -9,12 +9,7 @@ import Register from './Component/AuthComponent/Register';
 function App() {
   return (
     <>
-    <Navbar/>
     <div className="App">
-      <Navbar/>
-      <Login/>
-{/* <Register/> */}
-
       <BrowserRouter>
       <Navbar/>
       <br></br>

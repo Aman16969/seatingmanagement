@@ -1,17 +1,16 @@
 .App {
   text-align: center;
+  
+  min-height: 100vh;
+  justify-content: center;
   color: white;
   background-image: url(./Static/background-image.jpg);
-  background-repeat: no-repeat;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
- 
   
 }
-
 
 .bg {
   height: 100%;
