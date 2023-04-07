@@ -1,8 +1,9 @@
 import React from 'react'
 import Logo from './Logo'
 import './nav.css'
+
 import Profilepic from '../../Static/avatar.png'
-const Navbar=()=>{
+const Navbar=(props)=>{
 return(
     <>
     <nav>
@@ -12,9 +13,9 @@ return(
   </div>
   <div>
   <a href="#news">Home</a>
-  <a href="#news">Register</a>
+ <a href="/Register">Register</a>
   <a href="#news">Booking</a>
-  <a href="#news">Login</a>
+  <a href="/Login">Login</a>
   <div class="dropdown">
     
         <img src={Profilepic} alt="" class="dropbtn"/>

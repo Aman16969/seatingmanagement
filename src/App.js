@@ -9,9 +9,11 @@ import Register from './Component/AuthComponent/Register';
 
 function App() {
   return (
+    <>
+    <Navbar/>
     <div className="App">
-      <Navbar/>
-      <Login/>
+     
+      {/* <Login/> */}
 {/* <Register/> */}
 
       <BrowserRouter>
@@ -21,7 +23,7 @@ function App() {
       </Routes>
       </BrowserRouter>
     </div>
-
+    </>
   );
 }
 

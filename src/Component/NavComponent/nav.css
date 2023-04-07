@@ -3,9 +3,9 @@
     background-color: #24324a;
     display: flex;
     justify-content: space-between;
-    /* max-height: 50px; */
     position:fixed;
     width: 100%;
+    margin-top: 1px7;
   }
   
   .navbar a {
