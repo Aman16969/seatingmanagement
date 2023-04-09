@@ -1,13 +1,16 @@
 .navbar {
     overflow: hidden;
-    background-color: #24324a;
+    background-color: #183360;
     display: flex;
     justify-content: space-between;
     position:fixed;
     width: 100%;
-    margin-top: 1px7;
+   
+    margin-bottom: 2px solid black;
   }
-  
+  .navbar:hover{
+    background-color: #2e4b7e;
+  }
   .navbar a {
     float: left;
     font-size: 20spx;
