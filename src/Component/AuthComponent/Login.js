@@ -1,6 +1,5 @@
 import React from 'react'
 import './Auth.css'
-
 import { Link } from "react-router-dom";
 //import Register from './Register';
 const Login=(props)=>{
@@ -8,7 +7,7 @@ return(
     <>
     <div className="login-container">
       <h1 style={{color:'black'}}>Login</h1>
-  <form className="modal-content"  >
+  <form className="modal-content" style={{width:'30%'}} >
 
       <label for="Email"><b>Email</b></label>
       <input type="email" placeholder="Enter Email" name="email" required/>

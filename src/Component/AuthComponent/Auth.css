@@ -1,3 +1,4 @@
+
 input[type=text], input[type=email], input[type=password] {
     width: 90%;
     padding: 15px 15px;
@@ -11,8 +12,7 @@ input[type=text], input[type=email], input[type=password] {
     padding: 10px 0;
     margin-top: 30px;
     border-radius: 8px;
-    
-    
+ 
   }
  
   .modal-content button{
@@ -63,8 +63,9 @@ input[type=text], input[type=email], input[type=password] {
   
 
   .row1{
+    
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1.5fr 1.5fr;
     column-gap: 30px;
   }
   .row{
@@ -97,12 +98,12 @@ input[type=text], input[type=email], input[type=password] {
 
 
   .drop .select-loc{
-    width: 100%;
+    width: 90%;
     height: 40px;
     margin-top: 9px;
-    color: black;
+    color: #eb7d21;
     background-color: #e6e9ef;
-    border: none;
+    border : 1px solid #eb7d21;
   }
   .register-link a,.forgot-link a{
     color: #f18213;

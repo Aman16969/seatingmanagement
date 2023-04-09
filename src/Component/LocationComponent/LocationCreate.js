@@ -38,7 +38,7 @@ const LocationCreate = () => {
       <label for="address"><b>Address</b></label>
       <textarea name="address" id="" cols="30" rows="3" value={address} onChange={(e)=>{setAddress(e.target.value)}}></textarea>
               
-               <button>Add Location</button>
+               {!isPending && <button>Add Location</button>}
         
      
      

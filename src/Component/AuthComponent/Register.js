@@ -6,12 +6,9 @@ const Register=()=>{
    
     return(
         <>
-        <div className="container" style={{width:'60%' ,display: 'inline-flex',marginTop: '50px'}}>
-       <form >
-  
-    <h1>Register</h1>
-    
-    <hr></hr>
+        <div className="login-container">
+        <h2>Register</h2>
+       <form className="modal-content">
         <div className="row1">
             <div>
                 <label for="Id"><b>Accolite Id</b></label>
@@ -58,16 +55,17 @@ const Register=()=>{
                 <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
             </div>
         </div>
-    <hr></hr>
+    
     
 
-    <button type="submit" className="registerbtn">Register</button>
- 
+    <button style={{width:'96%'}}>Register</button>
+    <label>
+      <span className="register-link">Already have an account?
+        <Link to="/login"> Sign In</Link>
+      </span>
+      </label>
   
-  <div className="container signin">
-    <p>Already have an account?<Link to="/">Sign In</Link></p>
-    
-  </div>
+ 
 </form>
 </div>
         </>
