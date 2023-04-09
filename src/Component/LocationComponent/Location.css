@@ -2,24 +2,33 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+h2{
+  color: black;
+}
 .location-list {
-  background-color: #183360;
+  background-color: #f8f4ef;
   max-width: 100%;
   margin: 20px;
-  /* display: inline-table; */
   overflow-y: auto;
-  max-height: 250px;
+  max-height: 385px;
   border-radius: 5px;
   opacity: 70%;
+  border-bottom: 2px solid white;
+  border-top:  1.5px solid white;
+  box-shadow:  2px 2px #eb7d21;
 }
 .action{
   width: 100px;
 }
 .action:hover{
-  background-color: #3e1e02;
+  background-color: #eb7d21;
 }
 .location-list img{
   height: 30px;
+}
+.location-list img:hover{
+  height: 35px;
+ 
 }
 .location-list table{
   border-collapse: collapse;
@@ -33,44 +42,92 @@
 th,
 td {
   padding: 8px 16px;
-  border: 0.5px solid #45628a;
+  border: 0.5px solid #722b02;
 }
 th {
-  background: #183360;
-  color: white;
+  background: #fa9949;
+  color: rgb(12, 0, 0);
   font-weight: 700;
   font-size: 20px;
 }
 tr{
-  background-color: #ae8ef8;
-  color: black;
+  background-color: #ffffff;
+  color: rgb(14, 0, 0);
+  font-weight: 500;
   
 }
+tr:hover{
+  background-color: #ffebdb;
+  color: #eb7d21;
+}
 
-.location-create{
-  max-width: 400px;
-  margin: 0 auto;
-  align-items: center;
+
+.modal-content {
+  padding: 5px;
+  border: 1px solid #eb7d21;
+  border-radius: 5px;
+  margin: 1% auto 2% auto; /* 5% from the top, 15% from the bottom and centered */
+  box-shadow: 5px 2px #eb7d21;
+  width: 80% ;
+
+}
+.modal-content input[type=text], .modal-content input[type=number],.modal-content textarea {
+  width: 90%;
+  padding: 14px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #eb7d21;
+  box-sizing: border-box;
+  background-color: white;
+}
+.loctaion-container{
+  padding: 5px 0;
+  border-radius: 8px;
+  
+  
 }
 .location-create label{
-  text-align: left;
+  font-size: 20px;
   display: block;
+  margin-bottom: 1px;
+  color: rgb(45, 3, 3);
+  
 }
-.location-create input ,.location-create textarea{
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+.modal-content button{
+  background-color: #eb7d21;
+
+}
+.modal-content label{
   display: block;
+  padding: 5px;
+  color: black;
 }
-.location-create button{
-  background-color: #45628a;
+/* Set a style for all buttons */
+button {
+  background-color: #eb7d21;
+  opacity: 80%;
   color: white;
-  font-size: 16px;
-  border: 0;
-  padding: 8px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  font-weight: 1500;
+  font-size: 20px;
+  border: none;
   cursor: pointer;
+  width: 90%;
 }
-.location-create button:hover{
-  background-color: #183360 ;
+
+button:hover {
+  opacity: 0.7;
+  background-color: #eb7d21;
 }
+
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+/* Modal Content/Box */
+
