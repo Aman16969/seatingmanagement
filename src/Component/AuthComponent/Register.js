@@ -37,7 +37,8 @@ const Register=()=>{
             <div>
                 <label for="lname"><b>Location</b></label>
                 <div className="drop">
-                <select className='select-loc' name="subject" id="subject">
+                <select className='select-loc' name="subject" id="subject" defaultValue="none">
+                    <option value="none" selected disabled hidden>Select a Location</option>
                     <option value="" selected="selected">Banglore</option>
                     <option value="" selected="selected">Hydrabad</option>
                     <option value="" selected="selected">Chennai</option>
