@@ -8,14 +8,16 @@
   margin: 0;
   padding: 3px;
   background-color:rgb(251, 250, 255) ;
+  /* background-color:rgb(229, 228, 234) ; */
   box-shadow: 5px 2px #eb7d21;
  
   height: 45px;
   border-radius: 2px;
 
 }
-.navbar:hover{
-  background-color: #fedbc4;
+.navbar .navigate:hover{
+
+  transform: scale(1.2)
  
 }
 .navbar li {

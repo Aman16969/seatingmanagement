@@ -9,24 +9,24 @@ const Navbar = () => {
   return (
     <nav>
       <ul className="navbar">
-        <li>
+        <li className="logo">
           <Link to="https://apps.accolite.com/cob/#/mycards" className='aims-logo' style={{ width: '120px' }}>
             <Logo />
           </Link>
         </li>
-        <li>
+        <li className="navigate">
           <Link to="/">Home</Link>
         </li>
-        <li>
+        <li className="navigate">
           <Link to="/location">Location</Link>
         </li>
-        <li>
+        <li className="navigate">
           <Link to="/register">Register</Link>
         </li>
-        <li>
+        <li className="navigate">
           <Link to="/booking">Booking</Link>
         </li>
-        <li>
+        <li className="navigate">
           <Link to="/login">Login</Link>
         </li>
         <li className="dropdown">
