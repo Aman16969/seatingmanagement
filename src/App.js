@@ -7,7 +7,6 @@ import Login from './Component/AuthComponent/Login';
 import Register from './Component/AuthComponent/Register';
 import Location from './Component/LocationComponent/Location';
 import Home from './Component/Home';
-
 function App() {
   return (
     <>

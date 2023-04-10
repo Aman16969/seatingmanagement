@@ -1,9 +1,11 @@
 .Booking-container
 {
     width: 400px;
+    height: 500px;
     padding: 10px 0;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border-radius: 8px;
+
   }
 
   .modal-content button{
@@ -24,19 +26,3 @@
     background-color: #e6e9ef;
     border : 1px solid #eb7d21;
   }
- /* .date{
-    width: 90%;
-    height: 40px;
-    padding: 1px 0;
-    color: #eb7d21;
-    background-color: #e6e9ef;
- }
- .drop .select-seat{
-    align-items: center;
-    width: 90%;
-    height: 40px;
-    margin-top: 9px;
-    color: #eb7d21;
-    background-color: #e6e9ef;
-    border : 1px solid #eb7d21;
-  } */

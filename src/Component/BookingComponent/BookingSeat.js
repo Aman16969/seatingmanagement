@@ -1,10 +1,13 @@
 import React from 'react';
-import './BookingSeat.css'
+import './BookingSeat.css';
+import Bms from '../../Static/bms.png'
+
 const BookingSeat=()=>{
     return(
         <>
         <div className = "Booking-container">
-        <h2> Seat booking</h2>
+        <img  src={Bms}  alt="BMS" style={{ width: '49%', height: 'auto'}} />
+
         <form className="modal-content">
             <div>
                     <label for="location"><b>Location</b></label>
@@ -41,4 +44,3 @@ const BookingSeat=()=>{
     )
 }
 export default BookingSeat;
-// C:\Users\dency.patel\React\login_register_page
