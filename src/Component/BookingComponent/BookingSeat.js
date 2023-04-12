@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Booking.css";
-import Bms from "../../Static/bms.png";
-import seating from "../../Static/seating.png";
+import SeatMapping from "./SeatMapping";
 import LocationSelect from "./LocationSelect";
 import DateSelect from "./DateSelect";
 import SelectSeat from "./SelectSeats";
 import baseurl from "../../ApiFile";
-import { useNavigate } from "react-router-dom";
+
 const BookingSeat = () => {
-  const userId = "AU1271";
+  const userId = "AU12731";
   const [locationId, setLocationId] = useState(null);
   const [date, setDate] = useState(null);
   const [selectedSeat, setSelectedSeat] = useState(null);
@@ -16,8 +15,9 @@ const BookingSeat = () => {
   const [isPendingSeat, setIsPendingSeat] = useState(true);
   const [errorSeat, setErrorSeat] = useState(null);
   const [isPendingBooking, setIsPendingBooking] = useState(true);
+  const [message,setMessage]=useState(null);
 
-  const navigate = useNavigate();
+
   const handleBooking = (e) => {
     e.preventDefault();
     if (
@@ -28,7 +28,7 @@ const BookingSeat = () => {
     ) {
       const bookingDetail = {
         location_id: locationId,
-        user_id: "AU1271",
+        user_id: "AU12731",
         seat_id: selectedSeat,
         date: date,
       };
@@ -39,11 +39,13 @@ const BookingSeat = () => {
         body: JSON.stringify(bookingDetail),
       }).then(() => {
         setIsPendingBooking(false);
-        navigate("/");
+        setMessage("You Have Booked A seat: "+selectedSeat+" on "+date+".")
+        setTimeout(()=>{
+          window.location.reload();
+        },2000)
       });
     }
   };
-
   const handleFetchSeatsRequest = (e) => {
     e.preventDefault();
     fetch(
@@ -70,10 +72,10 @@ const BookingSeat = () => {
       });
     console.log(availableSeat);
   };
-
+ 
   return (
     <>
-      <div className="Booking-container" >
+      <div className="Booking-container">
         <div className="content">
           {/* <img src={Bms} alt="BMS" style={{ width: "60%", height: "auto" }} /> */}
           <form className="modal-content" onSubmit={handleFetchSeatsRequest}>
@@ -93,9 +95,17 @@ const BookingSeat = () => {
               </label>
               <DateSelect date={date} setDate={setDate} />
             </div>
-            <button style={{ width: "90%", padding: "4px" }}>Get Seats</button>
+            <button >Get Seats</button>
           </form>
-          <form className="modal-content" onSubmit={handleBooking}>
+          {
+            locationId && date && selectedSeat &&
+            <form className="modal-content" onSubmit={handleBooking}>
+            {isPendingBooking && <button>Book Seat</button>}
+            {!isPendingBooking && <button>Booking Seat</button>}
+          </form>
+          }
+          
+          {/* <form className="modal-content" onSubmit={handleBooking}>
             <SelectSeat
               availableSeat={availableSeat}
               selectedSeat={selectedSeat}
@@ -113,30 +123,16 @@ const BookingSeat = () => {
                 Seat Booked
               </button>
             )}
-          </form>
+          </form> */}
         </div>
         <div className="content">
-            <div className="seats-container">
-            <div className="Seat">
-            <label>
-              <input type="radio" name="seat" />
-              <div className="seatName">A00</div>
-            </label>
-          </div>
-          <div className="Seat">
-            <label>
-              <input type="radio" name="seat" />
-              <div className="seatName">A00</div>
-            </label>
-          </div>
-          <div className="Seat">
-            <label>
-              <input type="radio" name="seat" />
-              <div className="seatName">A00</div>
-            </label>
-          </div>
-            </div>
-          
+          {message&& <span style={{color:'red'}}>{message}</span>}
+          <SeatMapping 
+          availableSeat={availableSeat}
+              selectedSeat={selectedSeat}
+              setSelectedSeat={setSelectedSeat}
+              isPendingSeat={isPendingSeat}
+              errorSeat={errorSeat}/>
         </div>
       </div>
     </>
