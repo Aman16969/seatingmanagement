@@ -5,7 +5,7 @@ import LocationSelect from "./LocationSelect";
 import DateSelect from "./DateSelect";
 import SelectSeat from "./SelectSeats";
 import baseurl from "../../ApiFile";
-
+import UpComingBooking from "./UpComingBooking";
 const BookingSeat = () => {
   const userId = "AU12731";
   const [locationId, setLocationId] = useState(null);
@@ -104,6 +104,9 @@ const BookingSeat = () => {
             {!isPendingBooking && <button>Booking Seat</button>}
           </form>
           }
+          <form className="modal-content">
+            <UpComingBooking/>
+          </form>
           
           {/* <form className="modal-content" onSubmit={handleBooking}>
             <SelectSeat

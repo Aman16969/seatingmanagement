@@ -67,3 +67,32 @@
   font-size: 18px;
 }
 
+.upcoming-booking{
+  height: 240px;
+  padding: 2px;
+  overflow-y: auto;
+  max-height: 385px;
+  
+}
+.upcoming-booking h3{
+  text-decoration: none;
+  color: #eb7d21;
+  margin-top:0;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+}
+.data-booking{
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 3px;
+  margin-top: 5px;
+  box-shadow: 1px 0px rgb(164, 162, 162);
+  display: flex;
+  justify-content: space-around;
+}
+.data-booking span{
+  color: black;
+  justify-content: left;
+  font-size: 13px;
+}
