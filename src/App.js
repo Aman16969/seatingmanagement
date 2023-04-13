@@ -7,7 +7,7 @@ import Login from './Component/AuthComponent/Login';
 import Register from './Component/AuthComponent/Register';
 import Location from './Component/LocationComponent/Location';
 import Home from './Component/Home';
-import Profile from './Component/Profile/Profile'
+import Profile from './Component/ProfileSec/Profile'
 function App() {
   
   return (

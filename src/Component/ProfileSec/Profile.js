@@ -12,9 +12,14 @@ const Profile = () => {
     setEditMode(true);
   };
 
-  const userId = "2";
+  const userId = "AU123";
   useEffect(() => {
-    fetch(baseurl + "user/" + userId)
+    fetch(`http://localhost:8081/api/user/AU123`, {
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBVTEyMyxkZW5jeXBhdGVsNkBhY2NvbGl0ZWRpZ2l0YWwuY29tIiwiaXNzIjoiTWF0cml4Iiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2ODEzNjI5NTMsImV4cCI6MTY4MTQ0OTM1M30.WP4yYBZWTCSZAcg-ZpUxRY0boVFOGSyyMFGjHZhdBwFILbWROVxZJYonm3Iw1seNzDs9hT2m7PBdK2xPOlDjyg",
+      },
+    })
       .then((res) => {
         if (!res.ok) {
           throw Error("Response not received");
@@ -27,7 +32,6 @@ const Profile = () => {
       })
       .catch((err) => {
         setError(err.message);
-        isPending(true);
       });
   }, []);
   console.log(userDetail);
@@ -44,12 +48,17 @@ const Profile = () => {
                   <b>Accolite Id</b>
                 </label>
                 <input
+                  style={{
+                    backgroundColor: " #e6e9ef",
+                    color: "#5f5f5f",
+                    border: "1px solid #ddd",
+                  }}
                   type="text"
                   placeholder="Enter Accolite Id"
                   name="accolite_id"
                   id="accolite_id"
                   required
-                  readOnly={!editMode}
+                  readOnly={true}
                   value={userDetail.id}
                 />
               </div>
@@ -68,7 +77,7 @@ const Profile = () => {
                   name="email"
                   id="email"
                   required
-                  readOnly={!editMode}
+                  readOnly={true}
                   value={userDetail.email}
                 />
               </div>
@@ -89,7 +98,7 @@ const Profile = () => {
                   name="fname"
                   id="fname"
                   required
-                  readOnly={!editMode}
+                  readOnly={true}
                   value={userDetail.firstName}
                 />
               </div>
@@ -108,7 +117,7 @@ const Profile = () => {
                   name="lname"
                   id="lname"
                   required
-                  readOnly={!editMode}
+                  readOnly={true}
                   value={userDetail.lastName}
                 />
               </div>
@@ -162,34 +171,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-{
-  /* <div className="row">
-            <div>
-              <label for="psw">
-                <b>Password</b>
-              </label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="psw"
-                id="psw"
-                required
-                readOnly={!editMode}
-              />
-            </div>
-            <div>
-              <label for="psw-repeat">
-                <b>Repeat Password</b>
-              </label>
-              <input
-                type="password"
-                placeholder="Repeat Password"
-                name="psw-repeat"
-                id="psw-repeat"
-                required
-                readOnly={!editMode}
-              />
-            </div>
-          </div> */
-}

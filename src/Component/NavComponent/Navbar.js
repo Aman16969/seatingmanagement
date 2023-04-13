@@ -1,16 +1,20 @@
-import React from 'react'
-import Logo from './Logo'
-import './nav.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import Logo from "./Logo";
+import "./nav.css";
+import { Link } from "react-router-dom";
 
-import Profilepic from '../../Static/ProfileAvatar.webp'
+import Profilepic from "../../Static/ProfileAvatar.webp";
 
 const Navbar = () => {
   return (
     <nav>
       <ul className="navbar">
         <li className="logo">
-          <Link to="https://apps.accolite.com/cob/#/mycards" className='aims-logo' style={{ width: '120px' }}>
+          <Link
+            to="https://apps.accolite.com/cob/#/mycards"
+            className="aims-logo"
+            style={{ width: "120px" }}
+          >
             <Logo />
           </Link>
         </li>
@@ -32,13 +36,13 @@ const Navbar = () => {
         <li className="dropdown">
           <img src={Profilepic} alt="" className="dropbtn" />
           <div className="dropdown-content">
-            <Link to="/profile">Profile</Link>
+            <Link to="/Profile">Profile</Link>
             <Link to="/logout">Logout</Link>
           </div>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

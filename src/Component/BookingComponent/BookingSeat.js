@@ -7,7 +7,7 @@ import SelectSeat from "./SelectSeats";
 import baseurl from "../../ApiFile";
 import UpComingBooking from "./UpComingBooking";
 const BookingSeat = () => {
-  const userId = "AU1236";
+  const userId = "AU123";
   const [locationId, setLocationId] = useState(null);
   const [date, setDate] = useState(null);
   const [selectedSeat, setSelectedSeat] = useState(null);
@@ -15,8 +15,7 @@ const BookingSeat = () => {
   const [isPendingSeat, setIsPendingSeat] = useState(true);
   const [errorSeat, setErrorSeat] = useState(null);
   const [isPendingBooking, setIsPendingBooking] = useState(true);
-  const [message,setMessage]=useState(null);
-
+  const [message, setMessage] = useState(null);
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -28,7 +27,7 @@ const BookingSeat = () => {
     ) {
       const bookingDetail = {
         location_id: locationId,
-        user_id: "AU1236",
+        user_id: "AU123",
         seat_id: selectedSeat,
         date: date,
       };
@@ -39,10 +38,12 @@ const BookingSeat = () => {
         body: JSON.stringify(bookingDetail),
       }).then(() => {
         setIsPendingBooking(false);
-        setMessage("You Have Booked A seat: "+selectedSeat+" on "+date+".")
-        setTimeout(()=>{
+        setMessage(
+          "You Have Booked A seat: " + selectedSeat + " on " + date + "."
+        );
+        setTimeout(() => {
           window.location.reload();
-        },2000)
+        }, 2000);
       });
     }
   };
@@ -72,7 +73,7 @@ const BookingSeat = () => {
       });
     console.log(availableSeat);
   };
- 
+
   return (
     <>
       <div className="Booking-container">
@@ -95,19 +96,18 @@ const BookingSeat = () => {
               </label>
               <DateSelect date={date} setDate={setDate} />
             </div>
-            <button >Get Seats</button>
+            <button>Get Seats</button>
           </form>
-          {
-            locationId && date && selectedSeat &&
+          {locationId && date && selectedSeat && (
             <form className="modal-content" onSubmit={handleBooking}>
-            {isPendingBooking && <button>Book Seat</button>}
-            {!isPendingBooking && <button>Booking Seat</button>}
-          </form>
-          }
+              {isPendingBooking && <button>Book Seat</button>}
+              {!isPendingBooking && <button>Booking Seat</button>}
+            </form>
+          )}
           <form className="modal-content">
-            <UpComingBooking/>
+            <UpComingBooking />
           </form>
-          
+
           {/* <form className="modal-content" onSubmit={handleBooking}>
             <SelectSeat
               availableSeat={availableSeat}
@@ -129,13 +129,14 @@ const BookingSeat = () => {
           </form> */}
         </div>
         <div className="content">
-          {message&& <span style={{color:'red'}}>{message}</span>}
-          <SeatMapping 
-          availableSeat={availableSeat}
-              selectedSeat={selectedSeat}
-              setSelectedSeat={setSelectedSeat}
-              isPendingSeat={isPendingSeat}
-              errorSeat={errorSeat}/>
+          {message && <span style={{ color: "red" }}>{message}</span>}
+          <SeatMapping
+            availableSeat={availableSeat}
+            selectedSeat={selectedSeat}
+            setSelectedSeat={setSelectedSeat}
+            isPendingSeat={isPendingSeat}
+            errorSeat={errorSeat}
+          />
         </div>
       </div>
     </>
