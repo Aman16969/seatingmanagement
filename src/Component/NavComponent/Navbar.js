@@ -19,19 +19,19 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="navigate">
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li className="navigate">
-          <Link to="/location">Location</Link>
+          <Link to="/location">LOCATION</Link>
         </li>
         <li className="navigate">
-          <Link to="/register">Register</Link>
+          <Link to="/register">REGISTER</Link>
         </li>
         <li className="navigate">
-          <Link to="/booking">Booking</Link>
+          <Link to="/booking">BOOKING</Link>
         </li>
         <li className="navigate">
-          <Link to="/login">Login</Link>
+          <Link to="/login">LOGIN</Link>
         </li>
         <li className="dropdown">
           <img src={Profilepic} alt="" className="dropbtn" />
