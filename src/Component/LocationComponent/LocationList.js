@@ -1,18 +1,21 @@
 import Edit from "../../Static/edit.png";
 import Delete from "../../Static/delete.png";
 import useFetch from "../../useFetch";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import EditLocation from "./EditLocation";
 
 const LocationList = () => {
   const [isOpenCon, setIsOpenCon] = useState(false);
-  const [useEffectTrigger, setuseEffectTrigger] = useState(false);
+  const [isOpenEdit,setIsOpenEdit]=useState(false);
   const [locationId, setLocationId] = useState(null);
   const urlGet = "http://localhost:8081/api/location/";
   const { data: location, isPending, error } = useFetch(urlGet);
-  const navigate = useNavigate();
   const handleOpenPopUp = (e) => {
     setIsOpenCon(true);
+    setLocationId(e);
+  };
+  const handleOpenEditPopUp = (e) => {
+    setIsOpenEdit(true);
     setLocationId(e);
   };
 
@@ -24,6 +27,7 @@ const LocationList = () => {
       window.location.reload();
     });
   };
+  
   return (
     <>
       <h2>All Location</h2>
@@ -52,14 +56,15 @@ const LocationList = () => {
                       alt=""
                       onClick={() => handleOpenPopUp(loc.id)}
                     />{" "}
-                    <img src={Edit} alt="" />
+                    <img src={Edit} alt="" 
+                    onClick={() => handleOpenEditPopUp(loc.id)}/>
                   </td>
                 </tr>
               ))}
           </tbody>
         </table>
         {isOpenCon && (
-          <div className="popupContainer">
+          <div className="popupContainer" onClick={() => {setIsOpenCon(false)}}>
             <div className="popup-boxd">
               <div className="popupHeader">
                 <h2>Are you sure to delete this Location?</h2>
@@ -83,6 +88,7 @@ const LocationList = () => {
             </div>
           </div>
         )}
+        {isOpenEdit && <EditLocation locationId={locationId} isOpenEdit={isOpenEdit} setIsOpenEdit={setIsOpenEdit}/>}
       </div>
     </>
   );

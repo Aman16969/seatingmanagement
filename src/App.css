@@ -36,7 +36,7 @@ h2{
 }
 .popup-boxd {
     position: absolute;
-    background: whitesmoke;
+    background: rgb(165, 164, 164);
     width: 35vw;
     border-radius: 3px;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.4);

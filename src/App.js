@@ -9,8 +9,10 @@ import Location from './Component/LocationComponent/Location';
 import Home from './Component/Home';
 
 function App() {
+  
   return (
     <>
+ 
     <div className="App">
       <BrowserRouter>
       <Navbar/>
