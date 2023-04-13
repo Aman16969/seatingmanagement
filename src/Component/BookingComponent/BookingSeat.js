@@ -7,7 +7,7 @@ import SelectSeat from "./SelectSeats";
 import baseurl from "../../ApiFile";
 import UpComingBooking from "./UpComingBooking";
 const BookingSeat = () => {
-  const userId = "AU12731";
+  const userId = "AU1236";
   const [locationId, setLocationId] = useState(null);
   const [date, setDate] = useState(null);
   const [selectedSeat, setSelectedSeat] = useState(null);
@@ -28,7 +28,7 @@ const BookingSeat = () => {
     ) {
       const bookingDetail = {
         location_id: locationId,
-        user_id: "AU12731",
+        user_id: "AU1236",
         seat_id: selectedSeat,
         date: date,
       };
