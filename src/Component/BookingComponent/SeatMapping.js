@@ -9,6 +9,7 @@ const SeatMapping = (props) => {
     return (  
         <div className="seat-container">
             <form >
+            {seatName&& <span>Selected Seat:{seatName}</span>}
   {props.isPending && <div>Loading seats..</div>}
   {props.errorSeat && <div>{props.errorSeat}</div>}
   {props.availableSeat &&
