@@ -7,7 +7,7 @@ import Login from './Component/AuthComponent/Login';
 import Register from './Component/AuthComponent/Register';
 import Location from './Component/LocationComponent/Location';
 import Home from './Component/Home';
-
+import Profile from './Component/Profile/Profile'
 function App() {
   
   return (
@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/Login" element= {<Login/>}/>
           <Route exact path="/register" element= {<Register/>}/>
           <Route exact path="/location" element= {<Location/>}/>
+          <Route path = "/Profile" element={<Profile/>}/>
       </Routes>
       </div>
       </BrowserRouter>
