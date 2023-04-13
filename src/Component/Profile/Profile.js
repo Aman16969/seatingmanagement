@@ -12,7 +12,7 @@ const Profile = () => {
     setEditMode(true);
   };
 
-  const userId = "1";
+  const userId = "2";
   useEffect(() => {
     fetch(baseurl + "user/" + userId)
       .then((res) => {
