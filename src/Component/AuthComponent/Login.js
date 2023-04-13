@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import './Auth.css'
+import React, { useEffect, useState } from "react";
+import "./Auth.css";
 import { Link } from "react-router-dom";
-import baseurl from '../../ApiFile';
+import baseurl from "../../ApiFile";
 //import Register from './Register';
 
 const Login=()=>{
@@ -103,6 +103,6 @@ return(
   <h1>Data</h1>
   {jwtToken&&<span style={{color:'red'}}>{jwtToken.accessToken}</span>}
     </>
-)
-}
+  );
+};
 export default Login;
